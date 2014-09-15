@@ -1,0 +1,24 @@
+{
+  "name": "ripple-market-maker",
+  "version": "0.0.1",
+  "description": "Automatically make markets on Ripple.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevenzeiler/market-maker.git"
+  },
+  "keywords": [
+    "ripple",
+    "markets",
+    "bot"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevenzeiler/market-maker/issues"
+  },
+  "homepage": "https://github.com/stevenzeiler/market-maker"
+}

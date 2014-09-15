@@ -4,13 +4,15 @@ Automatically make a market on the Ripple order book
 
 ### Installation
  
-    npm install --save market-maker
+    npm install --save ripple-market-maker
 
 ### Proposed Usage
 
-    var marketMaker = new MarketMaker();
+    var MarketMaker = require('ripple-market-maker');
+    
+    var marketMaker = new MarketMaker.Bot();
 
-    var dogeToXrp = Market({
+    var dogeToXrp = new MarketMaker.Market({
       buy: {
         currency: 'DOG',
         issuer: 'rMpPEZcKYjYyfTyesrYWi5VV6wcy5mTxP1',
@@ -20,9 +22,9 @@ Automatically make a market on the Ripple order book
         currency: 'XRP',
         maximum: 1000
       },
-      minBuy: 100,
-      convert: function(callback) {
-        callback(3.2);
+      marketPrice: function(callback) {
+        // look up conversion price from some service
+        getXrpPricePerDogecoin(callback)
       }
     })
 
