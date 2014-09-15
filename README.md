@@ -10,7 +10,10 @@ Automatically make a market on the Ripple order book
 
     var MarketMaker = require('ripple-market-maker');
     
-    var marketMaker = new MarketMaker.Bot();
+    var marketMaker = new MarketMaker.Bot({
+      account: 'rippleAccountAddress'
+      secret: 'rippleAccountSecret'
+    });
 
     var dogeToXrp = new MarketMaker.Market({
       buy: {
